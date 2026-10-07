@@ -11,3 +11,6 @@
 
 /* Etiquetas visibles sobre la imagen de cada producto */
 .product-media{position:relative;overflow:hidden}.product-tag{position:absolute;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink);font-size:13px;font-weight:850;letter-spacing:.03em;box-shadow:0 8px 24px #00151d26;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.75)}.product-tag::before{content:"✦";color:var(--orange);font-size:12px}@media(max-width:760px){.product-tag{left:14px;bottom:14px;padding:8px 12px;font-size:12px}}
+
+/* Fotos completas en las tarjetas de producto */
+.product-media{background:#f1eee6;display:grid;place-items:center}.product-media>img{width:100%;aspect-ratio:1/1!important;object-fit:contain!important;object-position:center;background:#f1eee6;padding:10px}.product-media .product-tag{z-index:2}@media(max-width:760px){.product-media>img{aspect-ratio:1/1!important;padding:6px}}

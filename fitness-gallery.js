@@ -13,9 +13,9 @@
     },
     fitness: {
       images: [
+        "assets/fitness-3.jpeg",
         "assets/fitness-1.jpeg",
-        "assets/fitness-2.jpeg",
-        "assets/fitness-3.jpeg"
+        "assets/fitness-2.jpeg"
       ],
       label: "Llaveros fitness personalizados",
       tag: "Diseño deportivo · 3 modelos"

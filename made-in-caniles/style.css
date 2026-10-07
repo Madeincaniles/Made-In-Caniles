@@ -335,8 +335,9 @@ h1 {
 /* ENCARGOS */
 
 .custom {
+  width: calc(100% - 64px);
   max-width: 1176px;
-  margin: 10px auto 40px;
+  margin: 40px auto;
   background: var(--azul);
   color: white;
   border-radius: 28px;

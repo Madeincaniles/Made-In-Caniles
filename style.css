@@ -3,3 +3,7 @@
 
 /* Encargos personalizados */
 .custom{width:calc(100% - 64px);max-width:1176px;margin:40px auto;background:var(--ink);color:#fff;border-radius:28px;padding:46px;display:flex;justify-content:space-between;align-items:center;gap:50px}.custom h2{color:#fff;max-width:700px;font-size:46px;margin:8px 0 0;letter-spacing:-.04em}.custom p{color:#c9d6d8;max-width:700px;line-height:1.6}.custom .primary{flex-shrink:0}@media(max-width:760px){.custom{width:calc(100% - 40px);margin:20px auto;padding:30px 24px;display:block}.custom h2{font-size:38px}.custom .primary{display:inline-block;margin-top:12px}}
+
+
+/* Etiquetas atractivas sobre los productos */
+.product-body > p:first-child{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin:0 0 18px;padding:7px 13px;border-radius:999px;background:#f26a2114;color:var(--orange);font-size:13px;font-weight:850;letter-spacing:.04em;text-transform:uppercase;border:1px solid #f26a2130}.product-body > p:first-child::before{content:"✦";margin-right:7px;font-size:11px}

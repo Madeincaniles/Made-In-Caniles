@@ -34,7 +34,7 @@ const products = [
     name: "Llaveros de pádel",
     price: 5,
     priceText: "5 €",
-    img: "assets/pádel.jpeg",
+    img: "assets/padel.jpeg",
     tag: "Para amantes del pádel",
     desc: "Mini pala de pádel impresa en 3D, ligera y disponible en diferentes colores.",
     options: "padel"

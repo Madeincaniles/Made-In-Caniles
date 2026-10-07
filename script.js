@@ -24,7 +24,7 @@ const products = [
     name: "Llaveros fitness personalizados",
     price: null,
     priceText: "Consultar",
-    img: "assets/fitness-1.jpeg",
+    img: "assets/fitness-3.jpeg",
     tag: "Diseño deportivo",
     desc: "Llaveros inspirados en el fitness, personalizables con iniciales, logos y colores.",
     options: "fitness"

@@ -1,11 +1,34 @@
 (() => {
-  const categoryNames = {
-    all: "Todo el catálogo",
-    decoracion: "Decoración personalizada",
-    llaveros: "Llaveros y deporte",
-    bodas: "Bodas y eventos",
-    navidad: "Navidad y litofanías"
+  const categoryInfo = {
+    all: {
+      title: "Todos los productos",
+      description: "Explora todos nuestros diseños y elige el que quieres personalizar."
+    },
+    decoracion: {
+      title: "Decoración personalizada",
+      description: "Piezas decorativas con nombres, iniciales y detalles creados a medida."
+    },
+    llaveros: {
+      title: "Llaveros y deporte",
+      description: "Diseños inspirados en fitness, pádel y aficiones, personalizables a tu gusto."
+    },
+    bodas: {
+      title: "Bodas y eventos",
+      description: "Detalles para mesas, copas y celebraciones que puedes adaptar al estilo de tu evento."
+    },
+    navidad: {
+      title: "Navidad y litofanías",
+      description: "Adornos y recuerdos personalizados con tus fotografías para regalar en Navidad."
+    }
   };
+
+  const catalog = document.querySelector("#catalogo");
+  const catalogTitle = document.querySelector("#catalogTitle");
+  const catalogDescription = document.querySelector("#catalogDescription");
+  const productsMenu = document.querySelector("#productsMenu");
+  const productsTrigger = document.querySelector("#productsTrigger");
+  const menuButton = document.querySelector("#menuToggle");
+  const mainNav = document.querySelector("#mainNav");
 
   function getCategory(card) {
     const title = card.querySelector("h3")?.textContent.toLowerCase() || "";
@@ -32,43 +55,69 @@
       card.classList.toggle("is-hidden", !visible);
     });
 
-    document.querySelectorAll(".category-filter").forEach((button) => {
-      const active = button.dataset.filter === filter;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-
-    const note = document.querySelector("#catalogNote");
-    if (note) note.textContent = categoryNames[filter] || categoryNames.all;
+    const info = categoryInfo[filter] || categoryInfo.all;
+    if (catalogTitle) catalogTitle.textContent = info.title;
+    if (catalogDescription) catalogDescription.textContent = info.description;
   }
 
-  document.querySelectorAll(".category-filter").forEach((button) => {
-    button.addEventListener("click", () => {
-      filterProducts(button.dataset.filter || "all");
-      document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  function closeProductsDropdown() {
+    productsMenu?.classList.remove("open");
+    productsTrigger?.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileNav() {
+    mainNav?.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  }
+
+  function openCatalog(filter = "all") {
+    filterProducts(filter);
+    catalog?.classList.remove("is-catalog-hidden");
+    closeProductsDropdown();
+    closeMobileNav();
+
+    requestAnimationFrame(() => {
+      catalog?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+  }
+
+  document.querySelectorAll("[data-catalog-filter]").forEach((button) => {
+    button.addEventListener("click", () => openCatalog(button.dataset.catalogFilter || "all"));
   });
 
-  const menuButton = document.querySelector("#menuToggle");
-  const mainNav = document.querySelector("#mainNav");
+  document.querySelector("#closeCatalog")?.addEventListener("click", () => {
+    catalog?.classList.add("is-catalog-hidden");
+    document.querySelector("#nosotros")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  productsTrigger?.addEventListener("click", () => {
+    const open = productsMenu?.classList.toggle("open");
+    productsTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
 
   menuButton?.addEventListener("click", () => {
     const open = mainNav?.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+    if (!open) closeProductsDropdown();
   });
 
   mainNav?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
-      menuButton?.setAttribute("aria-expanded", "false");
+      closeProductsDropdown();
+      closeMobileNav();
     });
   });
 
+  document.querySelectorAll(".home-link").forEach((link) => {
+    link.addEventListener("click", () => catalog?.classList.add("is-catalog-hidden"));
+  });
+
   document.addEventListener("click", (event) => {
-    if (!mainNav?.classList.contains("open")) return;
-    if (mainNav.contains(event.target) || menuButton?.contains(event.target)) return;
-    mainNav.classList.remove("open");
-    menuButton?.setAttribute("aria-expanded", "false");
+    if (productsMenu && !productsMenu.contains(event.target)) closeProductsDropdown();
+
+    if (mainNav?.classList.contains("open") && !mainNav.contains(event.target) && !menuButton?.contains(event.target)) {
+      closeMobileNav();
+    }
   });
 
   prepareCards();

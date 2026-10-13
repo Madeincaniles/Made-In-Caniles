@@ -1,4 +1,12 @@
 (() => {
+  if (!document.querySelector('link[data-mic-premium]')) {
+    const premiumStyles = document.createElement('link');
+    premiumStyles.rel = 'stylesheet';
+    premiumStyles.href = 'premium.css?v=20261013-1';
+    premiumStyles.dataset.micPremium = 'true';
+    document.head.appendChild(premiumStyles);
+  }
+
   const categoryInfo = {
     all: {
       title: "Todos los productos",

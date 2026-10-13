@@ -6,8 +6,8 @@
   <title>Made In Caniles | Regalos y decoración personalizada en 3D</title>
   <meta name="description" content="Made In Caniles crea regalos, llaveros y decoración personalizada mediante impresión 3D. Diseños por encargo para regalos, bodas, eventos y Navidad.">
   <meta name="theme-color" content="#073947">
-  <link rel="stylesheet" href="style.css?v=20261013-1">
-  <link rel="stylesheet" href="fitness-gallery.css?v=20261013-1">
+  <link rel="stylesheet" href="style.css?v=20261013-2">
+  <link rel="stylesheet" href="fitness-gallery.css?v=20261013-2">
 </head>
 
 <body>
@@ -19,11 +19,49 @@
     </a>
 
     <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Quiénes somos</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#como">Cómo pedir</a>
-      <a href="https://www.instagram.com/madeincaniles" target="_blank" rel="noopener">Instagram</a>
+      <a class="nav-link home-link" href="#inicio">Inicio</a>
+      <a class="nav-link home-link" href="#nosotros">Quiénes somos</a>
+
+      <div class="products-menu" id="productsMenu">
+        <button class="products-trigger" id="productsTrigger" type="button" aria-expanded="false">
+          Productos
+          <span class="nav-chevron" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="products-dropdown" id="productsDropdown">
+          <div class="dropdown-heading">
+            <span>CATÁLOGO</span>
+            <strong>Elige una categoría</strong>
+          </div>
+
+          <button class="dropdown-option" type="button" data-catalog-filter="decoracion">
+            <span class="dropdown-icon">A</span>
+            <span><strong>Decoración personalizada</strong><small>Letras, nombres y piezas decorativas</small></span>
+          </button>
+
+          <button class="dropdown-option" type="button" data-catalog-filter="llaveros">
+            <span class="dropdown-icon">◆</span>
+            <span><strong>Llaveros y deporte</strong><small>Fitness, pádel y diseños personalizados</small></span>
+          </button>
+
+          <button class="dropdown-option" type="button" data-catalog-filter="bodas">
+            <span class="dropdown-icon">♡</span>
+            <span><strong>Bodas y eventos</strong><small>Detalles para mesas, copas y celebraciones</small></span>
+          </button>
+
+          <button class="dropdown-option" type="button" data-catalog-filter="navidad">
+            <span class="dropdown-icon">✦</span>
+            <span><strong>Navidad y litofanías</strong><small>Recuerdos con tus fotografías</small></span>
+          </button>
+
+          <button class="dropdown-all" type="button" data-catalog-filter="all">
+            Ver todos los productos <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <a class="nav-link home-link" href="#como">Cómo pedir</a>
+      <a class="nav-link" href="https://www.instagram.com/madeincaniles" target="_blank" rel="noopener">Instagram</a>
     </nav>
 
     <div class="header-actions">
@@ -32,21 +70,10 @@
       </button>
 
       <button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-        ☰
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
-
-  <div class="category-bar" aria-label="Categorías del catálogo">
-    <div class="category-bar-inner">
-      <span class="category-label">Categorías</span>
-      <button class="category-filter active" type="button" data-filter="all" aria-pressed="true">Todos</button>
-      <button class="category-filter" type="button" data-filter="decoracion" aria-pressed="false">Decoración personalizada</button>
-      <button class="category-filter" type="button" data-filter="llaveros" aria-pressed="false">Llaveros y deporte</button>
-      <button class="category-filter" type="button" data-filter="bodas" aria-pressed="false">Bodas y eventos</button>
-      <button class="category-filter" type="button" data-filter="navidad" aria-pressed="false">Navidad y litofanías</button>
-    </div>
-  </div>
 </div>
 
 <main id="inicio">
@@ -54,110 +81,115 @@
   <section class="hero">
     <div class="hero-copy">
       <span class="eyebrow">DISEÑO · IMPRESIÓN 3D · PERSONALIZACIÓN</span>
-
-      <h1>Detalles hechos para convertir momentos en recuerdos.</h1>
-
+      <h1>Detalles con historia, hechos especialmente para ti.</h1>
       <p>
-        Creamos piezas personalizadas para regalar, decorar y celebrar.
-        Tú nos cuentas la idea y nosotros la transformamos en un diseño único
-        fabricado mediante impresión 3D.
+        En Made In Caniles transformamos nombres, fotografías, aficiones y momentos especiales
+        en piezas personalizadas creadas mediante impresión 3D.
       </p>
 
       <div class="actions">
-        <a class="primary" href="#catalogo">Explorar catálogo</a>
-        <a class="secondary" href="#nosotros">Conócenos</a>
+        <a class="primary" href="#nosotros">Conoce Made In Caniles</a>
+        <a class="secondary" href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20idea%20para%20un%20producto%20personalizado." target="_blank" rel="noopener">Cuéntanos tu idea</a>
       </div>
 
       <div class="hero-notes">
-        <span>✓ Diseños por encargo</span>
-        <span>✓ Personalización a medida</span>
-        <span>✓ Atención directa por WhatsApp</span>
+        <span>Diseño personalizado</span>
+        <span>Fabricación por encargo</span>
+        <span>Atención directa</span>
       </div>
     </div>
 
     <div class="hero-visual">
       <img src="assets/letras-2.jpeg" alt="Producto personalizado de Made In Caniles">
-
       <div class="hero-badge">
-        <strong>Hecho especialmente para ti</strong>
-        <span>Nombre, color, tamaño y detalles</span>
+        <strong>Creado para ser único</strong>
+        <span>Personalizamos colores, nombres y detalles</span>
       </div>
     </div>
   </section>
 
 
   <section class="trust" aria-label="Ventajas de Made In Caniles">
-    <div>
-      <b>01</b>
-      <span>Diseños personalizados</span>
-    </div>
-
-    <div>
-      <b>02</b>
-      <span>Fabricación en impresión 3D</span>
-    </div>
-
-    <div>
-      <b>03</b>
-      <span>Pedido fácil y atención directa</span>
-    </div>
+    <div><b>01</b><span>Diseños personalizados</span></div>
+    <div><b>02</b><span>Fabricación en impresión 3D</span></div>
+    <div><b>03</b><span>Pedido sencillo y trato directo</span></div>
   </section>
 
 
   <section id="nosotros" class="about">
     <div class="about-title">
-      <span class="eyebrow">MADE IN CANILES</span>
-      <h2>Ideas personales, convertidas en algo que puedes tocar.</h2>
+      <span class="eyebrow">QUIÉNES SOMOS</span>
+      <h2>No hacemos productos en serie. Hacemos piezas que significan algo.</h2>
     </div>
 
     <div class="about-copy">
-      <p>
-        Somos un proyecto dedicado a crear productos personalizados mediante impresión 3D.
-        Nos gusta que cada pieza tenga un motivo detrás: un nombre, una fotografía,
-        una celebración, una afición o simplemente una idea que quieras hacer realidad.
-        Por eso trabajamos cada encargo de forma cercana, adaptando colores, tamaños y detalles
-        para que el resultado sea realmente tuyo.
+      <p class="about-lead">
+        Made In Caniles nace de la idea de convertir pequeños detalles en recuerdos personales.
+        Trabajamos cada encargo de forma cercana para que una idea, una fotografía, un nombre
+        o una celebración se conviertan en una pieza creada especialmente para esa persona.
       </p>
 
       <div class="about-points">
         <article class="about-point">
           <span>01</span>
-          <h3>Por encargo</h3>
-          <p>No trabajamos con detalles impersonales. Cada pedido puede adaptarse a quien lo recibe.</p>
+          <h3>Personalizamos contigo</h3>
+          <p>Adaptamos colores, nombres, tamaños y detalles para que el resultado tenga sentido para ti.</p>
         </article>
 
         <article class="about-point">
           <span>02</span>
-          <h3>Trato directo</h3>
-          <p>Hablamos contigo por WhatsApp para confirmar ideas, personalización y acabado.</p>
+          <h3>Fabricamos por encargo</h3>
+          <p>Cada pieza se prepara específicamente para el pedido, cuidando el diseño y el acabado final.</p>
         </article>
 
         <article class="about-point">
           <span>03</span>
-          <h3>Hecho con intención</h3>
-          <p>Buscamos que el producto no sea solo bonito, sino que tenga significado para ti.</p>
+          <h3>Te atendemos directamente</h3>
+          <p>Confirmamos contigo la personalización y todos los detalles del pedido por WhatsApp.</p>
         </article>
       </div>
     </div>
   </section>
 
 
-  <section id="catalogo" class="products">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">NUESTRO CATÁLOGO</span>
-        <h2>Encuentra el detalle que estás buscando</h2>
-      </div>
-
+  <section class="what-we-do">
+    <div class="what-we-do-intro">
+      <span class="eyebrow">LO QUE HACEMOS</span>
+      <h2>Un detalle para cada momento.</h2>
       <p>
-        Usa la barra de categorías para ver únicamente el tipo de producto que te interese.
-        Puedes volver a “Todos” en cualquier momento para ver el catálogo completo.
+        Creamos desde regalos personalizados y accesorios hasta decoración para celebraciones.
+        Si tienes una idea diferente, también podemos estudiar cómo hacerla realidad.
       </p>
     </div>
 
-    <div class="catalog-status">
-      <span>Categoría seleccionada</span>
-      <strong id="catalogNote">Todo el catálogo</strong>
+    <div class="what-we-do-grid">
+      <article>
+        <span class="service-number">01</span>
+        <h3>Regalos personalizados</h3>
+        <p>Nombres, fotografías y diseños pensados para regalar algo que no encontrarás en una tienda convencional.</p>
+      </article>
+      <article>
+        <span class="service-number">02</span>
+        <h3>Bodas y celebraciones</h3>
+        <p>Detalles decorativos para mesas, copas y eventos que pueden adaptarse al estilo de cada celebración.</p>
+      </article>
+      <article>
+        <span class="service-number">03</span>
+        <h3>Diseños a medida</h3>
+        <p>Cuéntanos lo que tienes en mente y valoramos contigo las posibilidades para convertirlo en impresión 3D.</p>
+      </article>
+    </div>
+  </section>
+
+
+  <section id="catalogo" class="products catalog-panel is-catalog-hidden" aria-live="polite">
+    <div class="catalog-header-row">
+      <div>
+        <span class="eyebrow">CATÁLOGO</span>
+        <h2 id="catalogTitle">Todos los productos</h2>
+        <p id="catalogDescription">Explora nuestros diseños y elige el que quieres personalizar.</p>
+      </div>
+      <button id="closeCatalog" class="close-catalog" type="button">Cerrar catálogo ×</button>
     </div>
 
     <div id="productGrid" class="grid"></div>
@@ -167,45 +199,25 @@
   <section class="custom">
     <div>
       <span class="eyebrow">¿TIENES OTRA IDEA?</span>
-      <h2>Si no está en el catálogo, podemos intentar crearla contigo.</h2>
+      <h2>Si puedes imaginarlo, podemos estudiar cómo crearlo.</h2>
       <p>
-        Cuéntanos qué tienes en mente. Estudiamos el diseño, las posibilidades de impresión
-        y la mejor forma de convertir tu idea en una pieza personalizada.
+        No todo tiene que estar en el catálogo. Cuéntanos tu idea y valoramos contigo
+        el diseño, la personalización y las posibilidades de fabricación.
       </p>
     </div>
 
-    <a
-      class="primary"
-      href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20idea%20para%20un%20dise%C3%B1o%20personalizado."
-      target="_blank"
-      rel="noopener">
-      Cuéntanos tu idea
-    </a>
+    <a class="primary" href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20idea%20para%20un%20dise%C3%B1o%20personalizado." target="_blank" rel="noopener">Hablar por WhatsApp</a>
   </section>
 
 
   <section id="como" class="how">
-    <span class="eyebrow">ASÍ DE FÁCIL</span>
-    <h2>De tu idea a tus manos</h2>
+    <span class="eyebrow">CÓMO FUNCIONA</span>
+    <h2>De tu idea a tus manos.</h2>
 
     <div class="steps">
-      <article>
-        <b>01</b>
-        <h3>Elige o imagina</h3>
-        <p>Selecciona un producto del catálogo o cuéntanos directamente la idea que tienes.</p>
-      </article>
-
-      <article>
-        <b>02</b>
-        <h3>Personalizamos</h3>
-        <p>Definimos contigo nombres, colores, tamaños, fotografías o cualquier detalle disponible.</p>
-      </article>
-
-      <article>
-        <b>03</b>
-        <h3>Confirmamos por WhatsApp</h3>
-        <p>Revisamos el pedido contigo, confirmamos disponibilidad, precio y los siguientes pasos.</p>
-      </article>
+      <article><b>01</b><h3>Elige o imagina</h3><p>Selecciona una categoría desde el menú Productos o cuéntanos directamente tu idea.</p></article>
+      <article><b>02</b><h3>Personalizamos</h3><p>Definimos contigo nombres, colores, tamaños, fotografías y todos los detalles disponibles.</p></article>
+      <article><b>03</b><h3>Confirmamos</h3><p>Revisamos el pedido contigo por WhatsApp antes de preparar la pieza.</p></article>
     </div>
   </section>
 
@@ -221,7 +233,6 @@
   <div class="footer-meta">
     <div class="footer-links">
       <a href="#nosotros">Quiénes somos</a>
-      <a href="#catalogo">Catálogo</a>
       <a href="https://www.instagram.com/madeincaniles" target="_blank" rel="noopener">Instagram</a>
       <a href="https://wa.me/34673596200" target="_blank" rel="noopener">WhatsApp</a>
     </div>
@@ -237,51 +248,28 @@
   </div>
 </div>
 
-
 <aside id="cart" class="cart">
   <div class="cart-head">
-    <div>
-      <span class="eyebrow">TU PEDIDO</span>
-      <h2>Carrito</h2>
-    </div>
+    <div><span class="eyebrow">TU PEDIDO</span><h2>Carrito</h2></div>
     <button id="closeCart" aria-label="Cerrar carrito">×</button>
   </div>
-
   <div id="cartItems"></div>
-
   <div class="cart-foot">
-    <div class="total">
-      <span>Total</span>
-      <strong id="cartTotal">0 €</strong>
-    </div>
-
+    <div class="total"><span>Total</span><strong id="cartTotal">0 €</strong></div>
     <button class="whatsapp" id="whatsappBtn">Pedir por WhatsApp →</button>
-
-    <small>
-      No pagas nada en esta web. Confirmaremos contigo los detalles
-      antes de preparar el pedido.
-    </small>
+    <small>No pagas nada en esta web. Confirmaremos contigo los detalles antes de preparar el pedido.</small>
   </div>
 </aside>
 
-
 <div id="overlay" class="overlay hidden"></div>
 
+<a class="floating-wa" href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Made%20In%20Caniles." target="_blank" rel="noopener">WhatsApp</a>
 
-<a
-  class="floating-wa"
-  href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Made%20In%20Caniles."
-  target="_blank"
-  rel="noopener">
-  WhatsApp
-</a>
-
-
-<script src="script.js?v=20261013-1"></script>
-<script src="fitness-gallery.js?v=20261013-1"></script>
-<script src="copas.js?v=20261013-1"></script>
-<script src="centro-mesa.js?v=20261013-1"></script>
-<script src="site.js?v=20261013-1"></script>
+<script src="script.js?v=20261013-2"></script>
+<script src="fitness-gallery.js?v=20261013-2"></script>
+<script src="copas.js?v=20261013-2"></script>
+<script src="centro-mesa.js?v=20261013-2"></script>
+<script src="site.js?v=20261013-2"></script>
 
 </body>
 </html>

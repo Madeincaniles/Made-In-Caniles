@@ -3,76 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Made In Caniles | Impresión 3D personalizada</title>
-  <meta name="description" content="Regalos y accesorios personalizados impresos en 3D. Personaliza tu diseño y haz tu pedido por WhatsApp.">
+  <title>Made In Caniles | Regalos y decoración personalizada en 3D</title>
+  <meta name="description" content="Made In Caniles crea regalos, llaveros y decoración personalizada mediante impresión 3D. Diseños por encargo para regalos, bodas, eventos y Navidad.">
   <meta name="theme-color" content="#073947">
-  <link rel="stylesheet" href="style.css?v=20261007-4">
-  <link rel="stylesheet" href="fitness-gallery.css?v=20261007-3">
+  <link rel="stylesheet" href="style.css?v=20261013-1">
+  <link rel="stylesheet" href="fitness-gallery.css?v=20261013-1">
 </head>
 
 <body>
 
-<header>
-  <a class="brand" href="#inicio">
-    <img src="assets/logo.png" alt="Made In Caniles">
-  </a>
+<div class="top-shell">
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Made In Caniles · Inicio">
+      <img src="assets/logo.png" alt="Made In Caniles">
+    </a>
 
-  <nav>
-    <a href="#productos">Productos</a>
-    <a href="#como">Cómo pedir</a>
-    <a href="https://www.instagram.com/madeincaniles" target="_blank">Instagram</a>
+    <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Quiénes somos</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como">Cómo pedir</a>
+      <a href="https://www.instagram.com/madeincaniles" target="_blank" rel="noopener">Instagram</a>
+    </nav>
 
-    <button id="cartBtn">
-      Carrito <span id="cartCount">0</span>
-    </button>
-  </nav>
-</header>
+    <div class="header-actions">
+      <button id="cartBtn" class="cart-button">
+        Carrito <span id="cartCount">0</span>
+      </button>
+
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <div class="category-bar" aria-label="Categorías del catálogo">
+    <div class="category-bar-inner">
+      <span class="category-label">Categorías</span>
+      <button class="category-filter active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="category-filter" type="button" data-filter="decoracion" aria-pressed="false">Decoración personalizada</button>
+      <button class="category-filter" type="button" data-filter="llaveros" aria-pressed="false">Llaveros y deporte</button>
+      <button class="category-filter" type="button" data-filter="bodas" aria-pressed="false">Bodas y eventos</button>
+      <button class="category-filter" type="button" data-filter="navidad" aria-pressed="false">Navidad y litofanías</button>
+    </div>
+  </div>
+</div>
 
 <main id="inicio">
 
   <section class="hero">
-
     <div class="hero-copy">
-      <span class="eyebrow">IMPRESIÓN 3D · PERSONALIZADA</span>
+      <span class="eyebrow">DISEÑO · IMPRESIÓN 3D · PERSONALIZACIÓN</span>
 
-      <h1>Regalos que no se encuentran en cualquier sitio.</h1>
+      <h1>Detalles hechos para convertir momentos en recuerdos.</h1>
 
       <p>
-        Convertimos nombres, fotos e ideas en piezas únicas impresas en 3D.
-        Personaliza cada detalle y haz tu pedido directamente por WhatsApp.
+        Creamos piezas personalizadas para regalar, decorar y celebrar.
+        Tú nos cuentas la idea y nosotros la transformamos en un diseño único
+        fabricado mediante impresión 3D.
       </p>
 
       <div class="actions">
-        <a class="primary" href="#productos">Ver catálogo</a>
-
-        <a
-          class="secondary"
-          href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20idea%20para%20un%20producto%20personalizado."
-          target="_blank">
-          Cuéntanos tu idea
-        </a>
+        <a class="primary" href="#catalogo">Explorar catálogo</a>
+        <a class="secondary" href="#nosotros">Conócenos</a>
       </div>
 
       <div class="hero-notes">
-        <span>✓ Personalizable</span>
-        <span>✓ Hecho por encargo</span>
-        <span>✓ Atención directa</span>
+        <span>✓ Diseños por encargo</span>
+        <span>✓ Personalización a medida</span>
+        <span>✓ Atención directa por WhatsApp</span>
       </div>
     </div>
 
     <div class="hero-visual">
-      <img src="assets/letras-2.jpeg" alt="Letra personalizada impresa en 3D">
+      <img src="assets/letras-2.jpeg" alt="Producto personalizado de Made In Caniles">
 
       <div class="hero-badge">
-        <strong>Hecho para ti</strong>
-        <span>Elige nombre, tamaño y color</span>
+        <strong>Hecho especialmente para ti</strong>
+        <span>Nombre, color, tamaño y detalles</span>
       </div>
     </div>
-
   </section>
 
 
-  <section class="trust">
+  <section class="trust" aria-label="Ventajas de Made In Caniles">
     <div>
       <b>01</b>
       <span>Diseños personalizados</span>
@@ -85,155 +99,169 @@
 
     <div>
       <b>03</b>
-      <span>Pedido fácil por WhatsApp</span>
+      <span>Pedido fácil y atención directa</span>
     </div>
   </section>
 
 
-  <section id="productos" class="products">
+  <section id="nosotros" class="about">
+    <div class="about-title">
+      <span class="eyebrow">MADE IN CANILES</span>
+      <h2>Ideas personales, convertidas en algo que puedes tocar.</h2>
+    </div>
 
+    <div class="about-copy">
+      <p>
+        Somos un proyecto dedicado a crear productos personalizados mediante impresión 3D.
+        Nos gusta que cada pieza tenga un motivo detrás: un nombre, una fotografía,
+        una celebración, una afición o simplemente una idea que quieras hacer realidad.
+        Por eso trabajamos cada encargo de forma cercana, adaptando colores, tamaños y detalles
+        para que el resultado sea realmente tuyo.
+      </p>
+
+      <div class="about-points">
+        <article class="about-point">
+          <span>01</span>
+          <h3>Por encargo</h3>
+          <p>No trabajamos con detalles impersonales. Cada pedido puede adaptarse a quien lo recibe.</p>
+        </article>
+
+        <article class="about-point">
+          <span>02</span>
+          <h3>Trato directo</h3>
+          <p>Hablamos contigo por WhatsApp para confirmar ideas, personalización y acabado.</p>
+        </article>
+
+        <article class="about-point">
+          <span>03</span>
+          <h3>Hecho con intención</h3>
+          <p>Buscamos que el producto no sea solo bonito, sino que tenga significado para ti.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="catalogo" class="products">
     <div class="section-head">
       <div>
         <span class="eyebrow">NUESTRO CATÁLOGO</span>
-        <h2>Elige tu próximo detalle</h2>
+        <h2>Encuentra el detalle que estás buscando</h2>
       </div>
 
       <p>
-        Cada pieza puede adaptarse a ti. Entra en un producto,
-        selecciona las opciones y añádelo al carrito.
+        Usa la barra de categorías para ver únicamente el tipo de producto que te interese.
+        Puedes volver a “Todos” en cualquier momento para ver el catálogo completo.
       </p>
     </div>
 
-    <div id="productGrid" class="grid"></div>
+    <div class="catalog-status">
+      <span>Categoría seleccionada</span>
+      <strong id="catalogNote">Todo el catálogo</strong>
+    </div>
 
+    <div id="productGrid" class="grid"></div>
   </section>
 
 
   <section class="custom">
-
     <div>
       <span class="eyebrow">¿TIENES OTRA IDEA?</span>
-
-      <h2>También hacemos encargos personalizados.</h2>
-
+      <h2>Si no está en el catálogo, podemos intentar crearla contigo.</h2>
       <p>
-        Si tienes una idea que no aparece en el catálogo,
-        cuéntanosla y estudiamos cómo convertirla en impresión 3D.
+        Cuéntanos qué tienes en mente. Estudiamos el diseño, las posibilidades de impresión
+        y la mejor forma de convertir tu idea en una pieza personalizada.
       </p>
     </div>
 
     <a
       class="primary"
       href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20idea%20para%20un%20dise%C3%B1o%20personalizado."
-      target="_blank">
-      Consultar por WhatsApp
+      target="_blank"
+      rel="noopener">
+      Cuéntanos tu idea
     </a>
-
   </section>
 
 
   <section id="como" class="how">
-
     <span class="eyebrow">ASÍ DE FÁCIL</span>
     <h2>De tu idea a tus manos</h2>
 
     <div class="steps">
-
       <article>
         <b>01</b>
-        <h3>Personaliza</h3>
-        <p>
-          Escoge producto, tamaño, nombre, colores o los detalles disponibles.
-        </p>
+        <h3>Elige o imagina</h3>
+        <p>Selecciona un producto del catálogo o cuéntanos directamente la idea que tienes.</p>
       </article>
 
       <article>
         <b>02</b>
-        <h3>Añade al carrito</h3>
-        <p>
-          Combina todos los productos que quieras en un único pedido.
-        </p>
+        <h3>Personalizamos</h3>
+        <p>Definimos contigo nombres, colores, tamaños, fotografías o cualquier detalle disponible.</p>
       </article>
 
       <article>
         <b>03</b>
-        <h3>Confirma por WhatsApp</h3>
-        <p>
-          Te llegará el pedido preparado. Confirmamos contigo las fotos,
-          disponibilidad y entrega.
-        </p>
+        <h3>Confirmamos por WhatsApp</h3>
+        <p>Revisamos el pedido contigo, confirmamos disponibilidad, precio y los siguientes pasos.</p>
       </article>
-
     </div>
   </section>
 
 </main>
 
 
-<footer>
-
+<footer class="site-footer">
   <div>
     <img src="assets/logo.png" alt="Made In Caniles">
-    <p>Detalles personalizados creados con impresión 3D.</p>
+    <p>Regalos, accesorios y decoración personalizada creados mediante impresión 3D.</p>
   </div>
 
-  <div>
-    <a href="https://www.instagram.com/madeincaniles" target="_blank">
-      @madeincaniles
-    </a>
-
+  <div class="footer-meta">
+    <div class="footer-links">
+      <a href="#nosotros">Quiénes somos</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="https://www.instagram.com/madeincaniles" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/34673596200" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
     <p>© <span id="year"></span> Made In Caniles</p>
   </div>
-
 </footer>
 
 
 <div id="modal" class="modal hidden">
-
   <div class="modal-card">
-
-    <button class="close" id="closeModal">×</button>
-
+    <button class="close" id="closeModal" aria-label="Cerrar">×</button>
     <div id="modalContent"></div>
-
   </div>
-
 </div>
 
 
 <aside id="cart" class="cart">
-
   <div class="cart-head">
-
     <div>
       <span class="eyebrow">TU PEDIDO</span>
       <h2>Carrito</h2>
     </div>
-
-    <button id="closeCart">×</button>
-
+    <button id="closeCart" aria-label="Cerrar carrito">×</button>
   </div>
 
   <div id="cartItems"></div>
 
   <div class="cart-foot">
-
     <div class="total">
       <span>Total</span>
       <strong id="cartTotal">0 €</strong>
     </div>
 
-    <button class="whatsapp" id="whatsappBtn">
-      Pedir por WhatsApp →
-    </button>
+    <button class="whatsapp" id="whatsappBtn">Pedir por WhatsApp →</button>
 
     <small>
       No pagas nada en esta web. Confirmaremos contigo los detalles
       antes de preparar el pedido.
     </small>
-
   </div>
-
 </aside>
 
 
@@ -243,15 +271,17 @@
 <a
   class="floating-wa"
   href="https://wa.me/34673596200?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Made%20In%20Caniles."
-  target="_blank">
+  target="_blank"
+  rel="noopener">
   WhatsApp
 </a>
 
 
-<script src="script.js?v=20261007-4"></script>
-<script src="fitness-gallery.js?v=20261007-4"></script>
-<script src="copas.js?v=20261007-1"></script>
-<script src="centro-mesa.js?v=20261007-2"></script>
+<script src="script.js?v=20261013-1"></script>
+<script src="fitness-gallery.js?v=20261013-1"></script>
+<script src="copas.js?v=20261013-1"></script>
+<script src="centro-mesa.js?v=20261013-1"></script>
+<script src="site.js?v=20261013-1"></script>
 
 </body>
 </html>
